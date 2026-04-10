@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit College</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+      <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="welcome">
+        <div class="img"><img src="https://forte.ac.in/images/logo.png" alt=""></div>
+        <div class="name">
+            <h1>Forte Institute Of Technology , Meerut</h1>
+        </div>
+        <div class="load">
+            <p>Hold On...</p>
+            <div class="circle"></div>
+        </div>
+        <div class="etc">Made With ❤ By Sushant Giri</div>
+    </div>
+    <!-- <div class="social">
+        <div class="social-left"><span><i class="ri-phone-fill"> 9997313043 , 9058310460</i></span></div>
+        <div class="social-right">
+            <ul>
+                <a href="https://www.facebook.com/fortemeerut/"><i class="ri-facebook-fill"></i></a>
+                <a href="https://x.com/Forte_Institute"><i class="ri-twitter-fill"></i></a>
+                <a href="https://www.instagram.com/forte_groups/"><i class="ri-instagram-fill"></i></a>
+            </ul>
+        </div>
+    </div> -->
+
+    <div class="side-bar">
+        <a href="tel:+919997313043" title="Call"><i class="ri-phone-fill"></i></a>
+        <a href="mailto:info@forte.ac.in" title="Email"><i class="ri-mail-fill"></i></a>
+        <a href="https://www.instagram.com/forte_groups/" target="_blank" title="Instagram"><i
+                class="ri-instagram-fill"></i></a>
+        <a href="https://x.com/Forte_Institute" target="_blank" title="Twitter"><i class="ri-twitter-fill"></i></a>
+        <a href="https://www.facebook.com/fortemeerut/" target="_blank" title="facebook"><i
+                class="ri-facebook-fill"></i></a>
+    </div>
+
+    <div class="nav">
+        <div class="logo">
+            <a href="/main.html"><img src="https://forte.ac.in/images/logo.png" alt="Fit Logo"></a>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li> <a href="/main.html">Home</a> </li>
+                <li>
+                    <a href="">About Us</a>
+                    <ul>
+                        <li> <a href="">Our Courses</a></li>
+                        <li> <a href="">Staff</a></li>
+                        <li> <a href="">Placement</a></li>
+                        <li> <a href="">facilities</a></li>
+                    </ul>
+                </li>
+                <li> <a href="">Read More </a>
+                    <ul>
+                        <li><a href="">Undergraduate</a></li>
+                        <li><a href="">Postgraduate</a></li>
+                        <li><a href="">Phd</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Academics</a>
+                    <ul>
+                        <li><a href="">Departments</a>
+                            <ul>
+                                <li><a href="">BBA</a></li>
+                                <li><a href="">BCA</a></li>
+                                <li><a href="">MCA</a></li>
+                                <li><a href="">MBA</a></li>
+                                <li><a href="">BSc CS</a></li>
+                                <li><a href="">BSc</a></li>
+                                <li><a href="">BA</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Reach Us</a></li>
+                <!-- <li><a href="">Student Corner</a>
+                    <ul>
+                        <li><a href="">Student login</a></li>
+                        <li><a href="">resources</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+    <div class="content">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://forte.ac.in/images/gallery/infrastructure/infrastructure-011.jpg"
+                        class="d-block w-100" alt="logo">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://forte.ac.in/images/gallery/infrastructure/infrastructure-010.jpg"
+                        class="d-block w-100" alt="image2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://forte.ac.in/images/gallery/infrastructure/infrastructure-007.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="about">
+        <div class="left-about">
+            <h2>Welcome to Forte Institute of Technology
+            </h2><br>
+            <hr class="mid">
+            <p>
+                FIT Group of Institutions was founded in 1998 as a non-profit organization and is setting high standards
+                of imparting quality education.
+
+                FIT offers a range of courses in the field of Management, Computer Applications, Traditional,
+                Engineering and Education. <br> <br> These programmes propel the students to forefronts of these
+                disciplines. The students immerse themselves in an environment <span>where knowledge is created and not
+                    just communicated.</span></p>
+        </div>
+        <div class="right-about">
+            <img src="https://forte.ac.in/images/welcome_forte.jpg" alt="">
+        </div>
+    </div>
+    <div class="help">
+        <h3 class="help-text">Here To Conect</h3>
+        <button class="btn1"><a href="/form.html">Click Here <i class="ri-arrow-right-up-line"></i></a></button>
+    </div>
+<div class="tabs container my-5">
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/9a2qqr_GjyioZzY0JbFuyegCDim7goLVE7kEEi_3ovo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvb25saW5l/LWNvbXB1dGVyLXNj/aWVuY2UtY291cnNl/LWlsbHVzdHJhdGlv/bi1zdmctZG93bmxv/YWQtcG5nLTQ2MTUx/OTEucG5n"
+                     class="card-img-top" alt="MCA">
+                <div class="card-body">
+                    <h5 class="card-title">MCA</h5>
+                    <p class="card-text">MCA – Master of Computer Applications</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/M4LE7dr4nTdfclJMFAS_bxT8geRGNfsktD1j-em3nhY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvYm95LXBy/ZXNlbnRpbmctY29t/cHV0ZXItY2hpcC1p/bGx1c3RyYXRpb24t/c3ZnLWRvd25sb2Fk/LXBuZy0xMTEwODU0/MC5wbmc"
+                     class="card-img-top" alt="BCA">
+                <div class="card-body">
+                    <h5 class="card-title">BCA</h5>
+                    <p class="card-text">BCA – Bachelor of Computer Applications</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/_TLCwlhxvHXzKsGdJe0HsXvmKSgu6tDpikhmZ6Q-tHo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvYnVzaW5l/c3MtcHJlc2VudGF0/aW9uLWlsbHVzdHJh/dGlvbi1zdmctZG93/bmxvYWQtcG5nLTUx/NzU0MzIucG5n"
+                     class="card-img-top" alt="BBA">
+                <div class="card-body">
+                    <h5 class="card-title">BBA</h5>
+                    <p class="card-text">BBA – Bachelor of Business Administration</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/WWr7Ry4601rSfSNsJVw4S_l5PUjWbjqSdLnU-z_LJ94/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvYnVzaW5l/c3MtZ3Jvd3RoLWls/bHVzdHJhdGlvbi1z/dmctZG93bmxvYWQt/cG5nLTE4NTE5NzEu/cG5n"
+                     class="card-img-top" alt="MBA">
+                <div class="card-body">
+                    <h5 class="card-title">MBA</h5>
+                    <p class="card-text">MBA – Master of Business Administration</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/54Kl-uRC_DthQ-qihGLkvUCiSTvxLWM7OV2wsrOEsqM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvYnVzaW5l/c3MtZ3Jvd3RoLWls/bHVzdHJhdGlvbi1z/dmctZG93bmxvYWQt/cG5nLTM2MTM4NjIu/cG5n"
+                     class="card-img-top" alt="BBA">
+                <div class="card-body">
+                    <h5 class="card-title">B.Com</h5>
+                    <p class="card-text">BCom – Bachelor of Commerce</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/R6ZYbdeWKvGEB3P3e8gHdmY37AF4QKbNQe77zOM_DTc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvY2VvLW1h/bmFnaW5nLW11bHRp/cGxlLXByb2plY3Rz/LWFuZC10YXNrcy1z/aW11bHRhbmVvdXNs/eS1pbGx1c3RyYXRp/b24tc3ZnLWRvd25s/b2FkLXBuZy03MDc4/NjIwLnBuZw"
+                     class="card-img-top" alt="BBA">
+                <div class="card-body">
+                    <h5 class="card-title">BA</h5>
+                    <p class="card-text">BA – Bachelor of Arts</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/tDZVyVC5w11oxv5I6pqcFoKFfxB8QwyCWLoARkMNDgE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvbWFuLXRo/aW5raW5nLWFib3V0/LWNvbXB1dGVyLWNo/aXAtaWxsdXN0cmF0/aW9uLXN2Zy1kb3du/bG9hZC1wbmctMTEz/MzgyNDkucG5n"
+                     class="card-img-top" alt="BBA">
+                <div class="card-body">
+                    <h5 class="card-title">BSc Cs</h5>
+                    <p class="card-text">BSc CS – Bachelor of Science in Computer Science</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/X6vgp1uudkic48ACGOjmAYAjJVvh4O4VpLL6z9LB3E0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvbWFuLWRv/aW5nLW1lZGljaW5l/LXJlc2VhcmNoLW9m/LXZpcnVzLWlsbHVz/dHJhdGlvbi1zdmct/ZG93bmxvYWQtcG5n/LTEwOTczOTM2LnBu/Zw"
+                     class="card-img-top" alt="BBA">
+                <div class="card-body">
+                    <h5 class="card-title">BSc</h5>
+                    <p class="card-text">BSc – Bachelor of Science</p>
+                    <a href="#" class="btn btn-primary">Read More </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="id-card-container">
+    
+    <div class="sparkles"></div>
+    <div class="sparkles"></div>
+<h1 class="enroll-text">Enroll Your <span>SEAT</span> Now.</h1>
+    <div class="thread">
+            <!-- <span>FIT COLLEGE MEERUT</span> -->
+        </div>
+        <div class="id-card">
+            <div class="card-top">
+                <h6>FORTE INSTITUTE OF TECHNOLOGY MEERUT</h6>
+                <p class="id-number">ID NO: FIT/2026/MCA/101</p>
+            </div>
+            <div class="card-main">
+                <div class="info-left">
+                    <p><strong>Name:</strong> Sushant Giri</p>
+                    <p><strong>Course:</strong> MCA (1st Sem)</p>
+                    <p><strong>D.O.B:</strong> 22/05/2002</p>
+                </div>
+                <div class="photo-right">
+                    <img src="https://imgs.search.brave.com/rU01e0HXoKvtsSiL6iWQkb3qacFyufBem1SD5eI3wNs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvOTQwOC85NDA4/MTc1LnBuZw" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="test">
+        <div class="right-test">
+            <img src="https://forte.ac.in/images/events/e1.jpg" alt="Placement">
+        </div>
+            <div class="left-test"><h1>Our Placement Drive</h1> <hr class="hr2"><p>At <span>Forte Institute Of Technology,</span> we are committed to shaping future-ready professionals. Our placement cell works tirelessly to connect students with top-tier companies and organizations across various sectors. With dedicated training programs, industry workshops, and career guidance sessions, we ensure that every student is equipped with the skills, confidence, and knowledge required to excel in their chosen field. Our alumni have successfully secured positions in reputed firms, demonstrating the college’s strong focus on career-oriented education and student success.</p></div>
+    </div>
+<div class="hiring-container">
+    <div class="marquee-wrapper">
+        <div class="marquee-track track-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="Slack">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+        </div>
+
+        <div class="marquee-track track-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Meta">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Apple_logo_white.svg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Meta">
+        </div>
+    </div>
+
+    <div class="register-card">
+        <div class="reg-img-box">
+            <img src="https://forte.ac.in/images/logo.png" alt=""> </div>
+        <h2>Our Placement Hiring Partner</h2>
+        <button class="reg-btn">Join Now</button>
+    </div>
+</div>
+<!-- foot -->
+ <footer class="college-footer">
+    <div class="footer-upper">
+        <div class="footer-wrapper">
+            <div class="f-col about-col">
+                <h3 class="f-title">About Us</h3>
+                <div class="f-logo-box">
+                    <img src="https://forte.ac.in/images/logo.png" alt="FIT Group Logo">
+                </div>
+                <p class="f-desc">
+                    FIT Group of Institutions was founded in 1998 as a non-profit organization and is setting high standards of imparting quality education.
+                </p>
+                <div class="f-socials">
+                    <a href="#" class="s-link"><i class="ri-facebook-box-fill"></i></a>
+                    <a href="#" class="s-link"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="s-link"><i class="ri-instagram-fill"></i></a>
+                    <a href="#" class="s-link"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="f-col links-col">
+                <h3 class="f-title">Quick Links</h3>
+                <div class="links-flex">
+                    <ul class="f-list">
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Our Programmes</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Facilities</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Placement</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Our Staff</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Grievance</a></li>
+                    </ul>
+                    <ul class="f-list">
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Academics</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Students</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Admissions</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Skill Development</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-line"></i> Mandatory Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="f-col contact-col">
+                <h3 class="f-title">Keep in Touch</h3>
+                <div class="contact-card">
+                    <div class="c-item">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Green Park Mawana Road, Meerut – 250001 (U.P.) INDIA.</span>
+                    </div>
+                    <div class="c-item">
+                        <i class="ri-phone-fill"></i>
+                        <span>9997313043, 9058310460</span>
+                    </div>
+                    <div class="c-item">
+                        <i class="ri-mail-send-fill"></i>
+                        <span>info@forte.ac.in</span>
+                    </div>
+                </div>
+                
+                <div class="visitor-box">
+                    <span class="v-label">Total Visitors :</span>
+                    <span class="v-count">31.4k</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="bottom-wrap">
+            <p>Copyright &copy; 2026 <strong>Forte Institute of Technology</strong>. All rights reserved.</p>
+            <div class="dev-tag" data-name="Sushant Giri"></div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center Feedback</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #121212;
+            line-height: 1.5;
+        }
+        
+.nav {
+    width: 100%;
+    padding: 10px 15px;
+    background: #40513b;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 4px 20px; */
+    position: fixed;
+    height: 70px;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.nav .logo img {
+    height: 50px;
+}
+
+/* Menu */
+.nav .info ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Menu items */
+.nav .info ul li {
+    position: relative;
+}
+
+/* Links */
+.nav .info ul li a {
+    text-decoration: none;
+    /* color:black; */
+    color: white;
+    padding: 10px 8px;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav .info ul li a:hover {
+    /* border-bottom:3px solid orangered; */
+    font-weight: 600;
+}
+
+/* Dropdown */
+.nav .info ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background: #628141; */
+        /* background-color: #40513b8a;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+    background-color: #73855f;
+    border: 1px solid rgba(0, 0, 0, 0.39);
+    display: none;
+    min-width: 180px;
+    border-radius: 5px;
+}
+
+.nav .info ul li:hover>ul {
+    display: block;
+    /* margin-top: 1px; */
+}
+
+.nav .info ul li ul li {
+    width: 100%;
+}
+
+.nav .info ul li ul li a {
+    padding: 8px 15px;
+}
+
+.nav .info ul li ul li a:hover {
+    /* margin-top: 12px; */
+    /* background:white; */
+    /* color: #333333; */
+    /* color: ; */
+    font-size: 1.1em;
+    /* color: #5b834f; */
+    font-weight: 700;
+}
+
+/* Nested dropdowns */
+.nav .info ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: black;
+    color: white;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .nav .info {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #628141;
+        color: #40513B;
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav .info ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav .info ul li a {
+        padding: 15px 20px;
+    }
+
+    .nav .info ul li ul {
+        position: static;
+        display: none;
+        background: #caeea360;
+        color: #40513B;
+        border-radius: 1em;
+    }
+
+    .nav .info ul li.active>ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+        h1,
+        h2 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        
+
+        /* Page title */
+        .page-title {
+            text-align: center;
+            font-size: 1.8em;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        /* Main container */
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        /* Left Form */
+        .left {
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .left h2 {
+            margin-bottom: 20px;
+            color: #4a58e8;
+        }
+
+        .field {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field label {
+            margin-bottom: 6px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .field input,
+        .field textarea,
+        .field select {
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+            border-color: #4a58e8;
+            box-shadow: 0 0 0 3px rgba(74, 88, 232, 0.2);
+        }
+
+        .field textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background: #4a58e8;
+            color: #fff;
+            padding: 12px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background: #3a48d8;
+        }
+
+        /* Right Image */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Responsive */
+                @media (max-width: 670px) {
+            #main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .right {
+                margin-top: 30px;
+            }
+            .nav h1{
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+        @media (max-width: 900px) {
+            #main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .right {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.5em;
+                margin: 15px 0;
+            }
+
+            .nav h1 {
+                font-size: 0.9em;
+                /* flex-direction: column; */
+            }
+            .nav img{
+                height: 8px;
+                width: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <div class="nav">
+        <div class="logo">
+            <a href="/main.html"><img src="https://forte.ac.in/images/logo.png" alt="Fit Logo"></a>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu(this)">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li> <a href="/main.html">Home</a> </li>
+                <li>
+                    <a href="">About Us</a>
+                    <ul>
+                        <li> <a href="">Our Courses</a></li>
+                        <li> <a href="">Staff</a></li>
+                        <li> <a href="">Placement</a></li>
+                        <li> <a href="">facilities</a></li>
+                    </ul>
+                </li>
+                <li> <a href="">Admission</a>
+                    <ul>
+                        <li><a href="">Undergraduate</a></li>
+                        <li><a href="">Postgraduate</a></li>
+                        <li><a href="">Phd</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Academics</a>
+                    <ul>
+                        <li><a href="">Departments</a>
+                            <ul>
+                                <li><a href="">BBA</a></li>
+                                <li><a href="">BCA</a></li>
+                                <li><a href="">MCA</a></li>
+                                <li><a href="">MBA</a></li>
+                                <li><a href="">BSc CS</a></li>
+                                <li><a href="">BSc</a></li>
+                                <li><a href="">BA</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Reach Us</a></li>
+                <!-- <li><a href="">Student Corner</a>
+                    <ul>
+                        <li><a href="">Student login</a></li>
+                        <li><a href="">resources</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+        
+</div>
+    <p class="page-title">Tell Us About Your Queries</p>
+
+    <div id="main">
+        <div class="left">
+            <form id="feedbackForm">
+                <h2>Give your Feedback</h2>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="+91 **********" required>
+                </div>
+                <div class="field">
+                    <label for="Course">Course</label>
+                    <input type="text" id="organization" placeholder="Enter Course name" required>
+                </div>
+                <div class="field">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Your city name" required>
+                </div>
+                <div class="field">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="Your State name" required>
+                </div>
+                <div class="field">
+                    <label for="feedback">Query</label>
+                    <textarea id="feedback" placeholder="Type your feedback here..." rows="5" required></textarea>
+                </div>
+                <div class="field">
+                    <label>Rating</label>
+                    <select id="rating">
+                        <option value="">Select</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+        <div class="right">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/customer-care-support-illustration-svg-download-png-7758785.png"
+                alt="Customer Support">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+            const rating = document.getElementById('rating').value;
+
+            alert(`Thanks ${name} for your feedback! 🌟`);
+            console.log({ name, email, feedback, rating });
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
